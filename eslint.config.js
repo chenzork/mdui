@@ -138,8 +138,24 @@ const config = tseslint.config(
       'import/no-unresolved': 'off',
       'import/extensions': [
         'error',
-        'ignorePackages',
-        { js: 'always', ts: 'never' },
+        'always',
+        {
+          checkTypeImports: true,
+          pattern: { js: 'always', ts: 'never' },
+        },
+      ],
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            // 不允许导入 .ts 文件
+            {
+              group: ['**/*.ts'],
+              message:
+                'Please use .js files instead of .ts files in the browser.',
+            },
+          ],
+        },
       ],
       'import/no-default-export': 'error',
       'import/order': [
