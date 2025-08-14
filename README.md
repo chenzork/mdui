@@ -11,6 +11,9 @@
   <br/>
   <a href="https://www.mdui.org"><strong>https://www.mdui.org</strong></a>
   <br/>
+
+> I am developing mdui v3 based on the M3 Expressive specification. You can follow the mdui v3 development progress [here](https://github.com/users/zdhxiong/projects/9/views/1). During this period, mdui v2 will continue to be updated for bug fixes and new features.
+
   <br/>
   <a href="https://www.npmjs.com/package/mdui">
     <img src="https://img.shields.io/npm/v/mdui.svg" alt="npm version"/>
@@ -31,17 +34,17 @@
 
 <hr/>
 
-* 🧩 Works with all frameworks
-* 🚛 Works with CDNs
-* 🏙️ Material 3 design system
-* 🌛 Includes dark theme and dynamic color
-* 🆚 Optimized for WebStorm and VSCode
-* 😸 Open source
+- 🧩 Works with all frameworks
+- 🚛 Works with CDNs
+- 🏙️ Material 3 design system
+- 🌛 Includes dark theme and dynamic color
+- 🆚 Optimized for WebStorm and VSCode
+- 😸 Open source
 
 ## Docs
 
-* [English](https://www.mdui.org/en/docs/2/)
-* [简体中文](https://www.mdui.org/zh-cn/docs/2/)
+- [English](https://www.mdui.org/en/docs/2/)
+- [简体中文](https://www.mdui.org/zh-cn/docs/2/)
 
 ## Installation
 
@@ -70,8 +73,8 @@ Use the component:
 <!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
     <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
   </head>
   <body>
