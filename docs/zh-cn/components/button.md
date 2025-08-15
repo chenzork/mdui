@@ -36,7 +36,7 @@ import type { Button } from 'mdui/components/button.js';
 
 ### 全宽 {#example-full-width}
 
-添加 `full-width` 属性可以使按钮显示为块状元素，即占据全部宽度。
+添加 `full-width` 属性可以使按钮占据父元素的全部宽度。
 
 ```html,example,expandable,playgroundId=199
 <mdui-button full-width>Button</mdui-button>
