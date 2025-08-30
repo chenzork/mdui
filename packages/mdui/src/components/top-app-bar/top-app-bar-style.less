@@ -13,7 +13,7 @@
   border-bottom-left-radius: var(--shape-corner);
   border-bottom-right-radius: var(--shape-corner);
   z-index: var(--z-index);
-  transition: top var(--mdui-motion-duration-long2) var(--mdui-motion-easing-standard),
+  transition: transform var(--mdui-motion-duration-long2) var(--mdui-motion-easing-standard),
               height var(--mdui-motion-duration-long2) var(--mdui-motion-easing-standard),
               box-shadow var(--mdui-motion-duration-short4) var(--mdui-motion-easing-linear),
               background-color var(--mdui-motion-duration-short4) var(--mdui-motion-easing-linear);
@@ -69,15 +69,15 @@
 
 :host([hide]:not([hide="false" i])) {
   .transition-duration(short4);
-  .top(-64 - 10);
+  .translate-y(-64 - 10);
 }
 
 :host([hide][variant="medium"]:not([hide="false" i])) {
-  .top(-112 - 10);
+  .translate-y(-112 - 10);
 }
 
 :host([hide][variant="large"]:not([hide="false" i])) {
-  .top(-152 - 10);
+  .translate-y(-152 - 10);
 }
 
 :host([shrink][variant="medium"]:not([shrink="false" i])),

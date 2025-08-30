@@ -12,7 +12,7 @@
   justify-content: flex-start;
   border-radius: var(--shape-corner) var(--shape-corner) 0 0;
   z-index: var(--z-index);
-  .transition(bottom, long2, emphasized);
+  .transition(transform, long2, emphasized);
   .padding(0, 16);
   .height(80);
   .background-color(surface-container);
@@ -25,7 +25,7 @@
 
 :host([hide]:not([hide="false" i])) {
   .transition-duration(short4);
-  .bottom(-80 - 10);
+  .translate-y(80 + 10);
 }
 
 ::slotted(:not(:first-child)) {
@@ -39,24 +39,15 @@
 // 含 fab-detach 属性时，fab 脱离 bottom-app-bar
 :host([fab-detach]:not([fab-detach="false" i])) {
   ::slotted(mdui-fab) {
-    position: absolute;
-    .transition(bottom, long2, standard);
-    .right(16);
-    .bottom(12);
+    .transition(transform, long2, standard);
   }
 }
 
 :host([fab-detach][hide][scroll-behavior~="hide"]:not([hide="false" i], [fab-detach="false" i])) {
   ::slotted(mdui-fab) {
     .transition-duration(short4);
-    .bottom(16);
     .elevation(2);
-  }
-}
-
-:host([fab-detach][hide][scroll-behavior~="hide"][scroll-target]:not([fab-detach="false" i], [hide="false" i], [scroll-target=""])) {
-  ::slotted(mdui-fab) {
-    .bottom(80 + 10 + 16);
+    .translate-y(-80 - 10 - 4);
   }
 }
 
