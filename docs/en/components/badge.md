@@ -1,3 +1,5 @@
+# Badge Component
+
 Badges provide dynamic information, such as counts or status indications. They can contain labels or numbers.
 
 ## Usage {#usage}

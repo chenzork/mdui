@@ -1,3 +1,5 @@
+# removeColorScheme 函数
+
 `removeColorScheme` 函数用于移除当前页面或指定元素上的配色方案。详见 [动态配色](/zh-cn/docs/2/styles/dynamic-color)。
 
 ## 使用方法 {#usage}

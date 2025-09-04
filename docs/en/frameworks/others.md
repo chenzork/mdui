@@ -1,3 +1,5 @@
+# Integrate with Other Frameworks
+
 mdui is built with browser-native Web Components, making it compatible with all web frameworks. Here are ways to use mdui with popular frameworks.
 
 ## Aurelia {#Aurelia}
@@ -13,10 +15,7 @@ and connect it to your application:
 ```typescript
 import { MduiWebTask } from 'aurelia-mdui';
 
-Aurelia
-  .register(MduiWebTask)
-  .app(MyApp)
-  .start();
+Aurelia.register(MduiWebTask).app(MyApp).start();
 ```
 
 **Notes**

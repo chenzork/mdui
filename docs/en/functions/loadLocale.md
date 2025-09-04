@@ -1,3 +1,5 @@
+# loadLocale Function
+
 The `loadLocale` function is used to load locale modules. For more details, refer to [Localization](/en/docs/2/getting-started/localization).
 
 ## Usage {#usage}
@@ -21,7 +23,7 @@ Dynamic import (Pre-load):
 ```js
 const localizedTemplates = new Map([
   ['zh-cn', import(`../node_modules/mdui/locales/zh-cn.js`)],
-  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)]
+  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));
@@ -35,7 +37,7 @@ import * as locale_zh_tw from 'mdui/locales/zh-tw.js';
 
 const localizedTemplates = new Map([
   ['zh-cn', locale_zh_cn],
-  ['zh-tw', locale_zh_tw]
+  ['zh-tw', locale_zh_tw],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));

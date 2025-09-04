@@ -1,3 +1,5 @@
+# Integrate with Angular
+
 To utilize mdui in Angular, you must first complete the [installation](/en/docs/2/getting-started/installation#npm) of mdui. Following this, additional configuration is required.
 
 ## Configuration {#configuration}
@@ -15,7 +17,7 @@ import { AppComponent } from './app.component';
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
 ```

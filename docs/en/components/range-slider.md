@@ -1,3 +1,5 @@
+# Range Slider Component
+
 The Range Slider component allows users to select a range from a series of values.
 
 ## Usage {#usage}

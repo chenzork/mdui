@@ -1,3 +1,5 @@
+# 布局组件 Layout
+
 布局组件提供了一个灵活的布局系统，用于创建复杂的页面布局。
 
 <style>
@@ -48,11 +50,11 @@ import type { LayoutMain } from 'mdui/components/layout-main.js';
 
 以下组件直接继承自 `<mdui-layout-item>` 组件，因此也可以作为布局组件使用：
 
-* [`<mdui-navigation-bar>`](/zh-cn/docs/2/components/navigation-bar)
-* [`<mdui-navigation-drawer>`](/zh-cn/docs/2/components/navigation-drawer)
-* [`<mdui-navigation-rail>`](/zh-cn/docs/2/components/navigation-rail)
-* [`<mdui-bottom-app-bar>`](/zh-cn/docs/2/components/bottom-app-bar)
-* [`<mdui-top-app-bar>`](/zh-cn/docs/2/components/top-app-bar)
+- [`<mdui-navigation-bar>`](/zh-cn/docs/2/components/navigation-bar)
+- [`<mdui-navigation-drawer>`](/zh-cn/docs/2/components/navigation-drawer)
+- [`<mdui-navigation-rail>`](/zh-cn/docs/2/components/navigation-rail)
+- [`<mdui-bottom-app-bar>`](/zh-cn/docs/2/components/bottom-app-bar)
+- [`<mdui-top-app-bar>`](/zh-cn/docs/2/components/top-app-bar)
 
 布局系统的最后一部分是 `<mdui-layout-main>` 组件，它会占据剩余空间，你可以在该组件内放置页面内容。
 

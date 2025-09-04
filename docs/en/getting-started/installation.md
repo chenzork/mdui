@@ -1,3 +1,5 @@
+# Installation
+
 mdui can be installed via npm or directly included from a CDN. The recommended method is npm.
 
 ## Install via npm {#npm}

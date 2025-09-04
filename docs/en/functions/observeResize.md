@@ -1,3 +1,5 @@
+# observeResize Function
+
 The `observeResize` function allows you to monitor changes in an element's size and execute a callback when the size changes.
 
 This function utilizes the [`ResizeObserver`](https://developer.mozilla.org/zh-CN/docs/Web/API/ResizeObserver) API and implements the singleton pattern for enhanced performance.
@@ -14,7 +16,7 @@ Example:
 
 ```js
 // Listen for size changes on document.body
-const observer = observeResize(document.body, function(entry, observer) {
+const observer = observeResize(document.body, function (entry, observer) {
   // At this point, document.body's size has changed. You can get the new size from entry.
   console.log(entry);
 

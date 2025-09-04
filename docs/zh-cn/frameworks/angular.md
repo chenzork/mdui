@@ -1,3 +1,5 @@
+# 与 Angular 集成
+
 在 Angular 中使用 mdui 时，首先需要按照 [安装](/zh-cn/docs/2/getting-started/installation#npm) 页面的指引完成安装，然后进行一些必要的配置。
 
 ## 配置 {#configuration}
@@ -15,7 +17,7 @@ import { AppComponent } from './app.component';
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule {}
 ```

@@ -1,3 +1,5 @@
+# Chip Component
+
 Chips are compact elements that represent an input, attribute, or action.
 
 ## Usage {#usage}
@@ -26,10 +28,10 @@ Example:
 
 The `variant` attribute determines the chip's appearance. There are four available variants:
 
-* `assist`: Represents smart or automated actions that can span multiple apps.
-* `filter`: Represents filters for a collection.
-* `input`: Represents discrete pieces of information entered by a user.
-* `suggestion`: Helps narrow a user’s intent by presenting dynamically generated suggestions.
+- `assist`: Represents smart or automated actions that can span multiple apps.
+- `filter`: Represents filters for a collection.
+- `input`: Represents discrete pieces of information entered by a user.
+- `suggestion`: Helps narrow a user’s intent by presenting dynamically generated suggestions.
 
 ```html,example,expandable,playgroundId=222
 <mdui-chip variant="assist">Assist</mdui-chip>

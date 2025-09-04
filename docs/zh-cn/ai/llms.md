@@ -1,3 +1,5 @@
+# LLMs.txt
+
 mdui 提供了 `llms.txt` 与 `llms-full.txt`，用于为 LLM（大语言模型）提供准确、可引用的上下文，帮助 AI 更可靠地回答 mdui 相关问题。
 
 ## 使用 llms.txt 为 AI 提供上下文 {#context}

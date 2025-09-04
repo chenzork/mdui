@@ -1,3 +1,5 @@
+# Collapse Component
+
 Collapse panels are utilized to group and conceal complex content areas, enhancing page organization.
 
 The collapse panel component does not come with styles. You must either create your own styles or use it in conjunction with other components.

@@ -1,3 +1,5 @@
+# 菜单组件 Menu
+
 菜单组件提供了一系列垂直排列的选项。当用户与按钮、或其他控件交互时，将显示菜单。
 
 如果你需要实现下拉菜单，可以配合 [`<mdui-dropdown>`](/zh-cn/docs/2/components/dropdown) 组件。

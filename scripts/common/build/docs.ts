@@ -3,7 +3,7 @@ import { I18nLanguage } from './i18n.js';
 export const docOrigin = 'https://www.mdui.org';
 
 // 文档页面 及 页面中包含的组件：pageName => tagName[]
-const docComponents: Record<string, string[]> = {
+export const docComponents: Record<string, string[]> = {
   button: ['mdui-button'],
   'button-icon': ['mdui-button-icon'],
   fab: ['mdui-fab'],
@@ -42,11 +42,13 @@ const docComponents: Record<string, string[]> = {
 // vscode 和 webstorm 中的 description 如果包含链接，默认是不包含域名的，这里手动添加域名
 export const handleDescription = (
   description: string,
-  language: I18nLanguage,
+  language?: I18nLanguage,
 ) => {
+  const languagePath = language ? `${language}/` : '';
+
   return (description || '').replaceAll(
     '](/docs/2/',
-    `](${docOrigin}/${language}/docs/2/`,
+    `](${docOrigin}/${languagePath}docs/2/`,
   );
 };
 
@@ -60,11 +62,12 @@ const getPageNameByTagName = (tagName: string): string => {
 // 根据 tagName 获取文档页面url
 export const getDocUrlByTagName = (
   tagName: string,
-  language: I18nLanguage,
+  language?: I18nLanguage,
 ): string => {
   const pageName = getPageNameByTagName(tagName);
+  const languagePath = language ? `${language}/` : '';
 
-  return `${docOrigin}/${language}/docs/2/components/${pageName}`;
+  return `${docOrigin}/${languagePath}docs/2/components/${pageName}`;
 };
 
 // 判断文档页面是否含有多个组件（如 radio 文档页有 mdui-radio 和 mdui-radio-group 两个组件）

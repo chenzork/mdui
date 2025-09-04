@@ -1,3 +1,5 @@
+# 设计令牌
+
 设计令牌（Design Tokens）是一种用于管理设计系统的策略。
 
 它将设计系统中的所有可复用元素（例如颜色、字体、间距等）抽象为独立的变量，以便在整个设计系统中进行统一的管理和应用。
@@ -1127,7 +1129,9 @@ mdui 提供了 15 种不同的文字样式，包括 Display large、Display medi
 ```css
 /* 修改 level1 级别的阴影 */
 :root {
-  --mdui-elevation-level1: 0 0.5px 1.5px 0 rgba(var(--mdui-color-shadow), 19%), 0 0 1px 0 rgba(var(--mdui-color-shadow), 3.9%);
+  --mdui-elevation-level1:
+    0 0.5px 1.5px 0 rgba(var(--mdui-color-shadow), 19%),
+    0 0 1px 0 rgba(var(--mdui-color-shadow), 3.9%);
 }
 
 /* 把 foo 元素的阴影设置为 level1 */
@@ -1160,7 +1164,8 @@ mdui 组件中的动画缓动曲线和持续时间可以通过 CSS 自定义属�
 
 /* 设置 foo 元素的过渡效果使用 standard 的缓动曲线、及 short1 的持续时间 */
 .foo {
-  transition: all var(--mdui-motion-duration-short1) var(--mdui-motion-easing-standard);
+  transition: all var(--mdui-motion-duration-short1)
+    var(--mdui-motion-easing-standard);
 }
 ```
 
@@ -1286,7 +1291,6 @@ mdui 提供了一系列的响应式断点，这些断点可以通过 CSS 自定�
 ```css
 /* 错误用法。媒体查询中无法使用 CSS 自定义属性 */
 @media (min-width: var(--mdui-breakpoint-sm)) {
-
 }
 ```
 

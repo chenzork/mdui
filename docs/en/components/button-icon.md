@@ -1,3 +1,5 @@
+# Icon Button Component
+
 Icon buttons are used to execute minor actions with a single click.
 
 ## Usage {#usage}

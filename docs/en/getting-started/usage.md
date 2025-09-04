@@ -1,3 +1,5 @@
+# Usage
+
 mdui components, as standard Web Components, can be used like `<div>` elements. Each component's documentation provides a comprehensive API, including attributes, methods, events, slots, CSS parts, and CSS custom properties.
 
 This guide focuses on the usage of Web Components.

@@ -1,3 +1,5 @@
+# Slider Component
+
 Sliders provide a way for users to select from a range of values.
 
 ## Usage {#usage}

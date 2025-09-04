@@ -1,3 +1,5 @@
+# Switch Component
+
 The Switch component is utilized to toggle the state of a single setting between on and off.
 
 ## Usage {#usage}

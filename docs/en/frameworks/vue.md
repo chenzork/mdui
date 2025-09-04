@@ -1,3 +1,5 @@
+# Integrate with Vue
+
 After completing the [installation](/en/docs/2/getting-started/installation#npm) of mdui in Vue, you'll need to perform some additional configurations.
 
 ## Configuration {#configuration}
@@ -6,7 +8,7 @@ To prevent Vue from interpreting mdui components as Vue components, you'll need 
 
 ```js
 // vite.config.js
-import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue';
 
 export default {
   plugins: [
@@ -14,12 +16,12 @@ export default {
       template: {
         compilerOptions: {
           // Treat all tags starting with mdui- as mdui components
-          isCustomElement: (tag) => tag.startsWith('mdui-')
-        }
-      }
-    })
-  ]
-}
+          isCustomElement: (tag) => tag.startsWith('mdui-'),
+        },
+      },
+    }),
+  ],
+};
 ```
 
 For more information, please refer to the [Vue official documentation](https://cn.vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue).

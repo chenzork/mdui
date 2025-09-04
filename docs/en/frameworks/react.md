@@ -1,3 +1,5 @@
+# Integrate with React
+
 To integrate mdui with React, start by following the steps on the [installation](/en/docs/2/getting-started/installation#npm) page.
 
 ## Notes {#notes}
@@ -20,7 +22,7 @@ function App() {
 
   useEffect(() => {
     const handleToggle = () => {
-      console.log("switch is toggled");
+      console.log('switch is toggled');
     };
 
     switchRef.current.addEventListener('change', handleToggle);
@@ -30,9 +32,7 @@ function App() {
     };
   }, []);
 
-  return (
-    <mdui-switch ref={switchRef}></mdui-switch>
-  );
+  return <mdui-switch ref={switchRef}></mdui-switch>;
 }
 
 export default App;

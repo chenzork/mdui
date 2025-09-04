@@ -1,3 +1,5 @@
+# List Component
+
 A List is a vertical arrangement of items that can contain text or images.
 
 ## Usage {#usage}
@@ -144,9 +146,9 @@ The `rounded` attribute on `<mdui-list-item>` gives the item a rounded appearanc
 
 The `alignment` attribute on `<mdui-list-item>` aligns elements on the left and right. Possible values:
 
-* `start`: top alignment.
-* `center`: center alignment.
-* `end`: bottom alignment.
+- `start`: top alignment.
+- `center`: center alignment.
+- `end`: bottom alignment.
 
 ```html,example,expandable,playgroundId=293
 <mdui-list>

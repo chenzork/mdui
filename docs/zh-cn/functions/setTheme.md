@@ -1,3 +1,5 @@
+# setTheme 函数
+
 `setTheme` 函数用于设置当前页面或指定元素的主题。
 
 可选的主题包括 `light`、`dark`和 `auto`。详见 [暗色模式](/zh-cn/docs/2/styles/dark-mode)。

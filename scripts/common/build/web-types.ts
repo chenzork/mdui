@@ -9,9 +9,9 @@ import {
   Slot,
 } from 'custom-elements-manifest';
 import { getAllComponents, isAttribute, isProperty } from './component.js';
+import { getCssClasses } from './css-classes.js';
 import { getCssProperties } from './css-properties.js';
 import {
-  docOrigin,
   getDocUrlByTagName,
   isDocHasMultipleComponents,
   handleDescription,
@@ -20,7 +20,6 @@ import {
   i18nLanguages,
   getI18nData,
   getI18nItem,
-  I18nData,
   I18nDataSection,
 } from './i18n.js';
 
@@ -187,28 +186,19 @@ export const buildWebTypes = (metadataPath: string, packageFolder: string) => {
 
     // 全局 CSS 类、CSS 变量（当前手动维护）
     if (packageFolder === 'mdui') {
-      const classes: { name: keyof I18nData['cssClasses']; docUrl: string }[] =
-        [
-          { name: 'mdui-theme-light', docUrl: '/styles/dark-mode' },
-          { name: 'mdui-theme-dark', docUrl: '/styles/dark-mode' },
-          { name: 'mdui-theme-auto', docUrl: '/styles/dark-mode' },
-          { name: 'mdui-prose', docUrl: '/styles/prose' },
-          { name: 'mdui-table', docUrl: '/styles/prose' },
-        ];
-
       (webTypes.contributions.css as unknown) = {
         properties: getCssProperties(language).map((property) => ({
           name: property.name,
           description: handleDescription(property.description, language),
           'doc-url': property.docUrl,
         })),
-        classes: classes.map((cls) => ({
+        classes: getCssClasses(language).map((cls) => ({
           name: cls.name,
-          description: i18nData.cssClasses[cls.name].description,
+          description: handleDescription(cls.description, language),
           'description-sections': {
-            [i18nData.common.example]: i18nData.cssClasses[cls.name].example,
+            [i18nData.common.example]: cls.example,
           },
-          'doc-url': `${docOrigin}/${language}/docs/2${cls.docUrl}`,
+          'doc-url': cls.docUrl,
         })),
       };
     }

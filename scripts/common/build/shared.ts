@@ -1,10 +1,18 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 /**
  * 是否是开发模式
  */
 export const isDev = process.argv.slice(2)[0] === '--dev';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+/**
+ * 项目根路径
+ */
+export const repoRoot = path.resolve(__dirname, '../../..');
 
 /**
  * 遍历文件夹中的文件

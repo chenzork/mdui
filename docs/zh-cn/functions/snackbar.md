@@ -1,3 +1,5 @@
+# snackbar 函数
+
 `snackbar` 函数是对 [`<mdui-snackbar>`](/zh-cn/docs/2/components/snackbar) 组件的封装。使用该函数，你无需编写组件的 HTML 代码，就能打开一个 snackbar。
 
 ## 使用方法 {#usage}

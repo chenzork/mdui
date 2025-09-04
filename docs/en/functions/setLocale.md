@@ -1,3 +1,5 @@
+# setLocale Function
+
 The `setLocale` function sets the current locale code. For more details, refer to [Localization](/en/docs/2/getting-started/localization).
 
 ## Usage {#usage}

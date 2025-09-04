@@ -1,3 +1,5 @@
+# Layout Component
+
 Layout components provide a flexible system for page-level layout.
 
 <style>
@@ -48,11 +50,11 @@ The layout system is built from the outside in. Each layout component (`<mdui-la
 
 The following components inherit from `<mdui-layout-item>` and can also be used as layout components:
 
-* [`<mdui-navigation-bar>`](/en/docs/2/components/navigation-bar)
-* [`<mdui-navigation-drawer>`](/en/docs/2/components/navigation-drawer)
-* [`<mdui-navigation-rail>`](/en/docs/2/components/navigation-rail)
-* [`<mdui-bottom-app-bar>`](/en/docs/2/components/bottom-app-bar)
-* [`<mdui-top-app-bar>`](/en/docs/2/components/top-app-bar)
+- [`<mdui-navigation-bar>`](/en/docs/2/components/navigation-bar)
+- [`<mdui-navigation-drawer>`](/en/docs/2/components/navigation-drawer)
+- [`<mdui-navigation-rail>`](/en/docs/2/components/navigation-rail)
+- [`<mdui-bottom-app-bar>`](/en/docs/2/components/bottom-app-bar)
+- [`<mdui-top-app-bar>`](/en/docs/2/components/top-app-bar)
 
 The `<mdui-layout-main>` component occupies the remaining space, where you can place page content.
 

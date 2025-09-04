@@ -1,3 +1,5 @@
+# 对话框组件 Dialog
+
 对话框用于在用户的操作流程中提供重要提示。
 
 除了直接使用该组件外，mdui 还提供了四个函数：[`mdui.dialog`](/zh-cn/docs/2/functions/dialog)、[`mdui.alert`](/zh-cn/docs/2/functions/alert)、[`mdui.confirm`](/zh-cn/docs/2/functions/confirm)、[`mdui.prompt`](/zh-cn/docs/2/functions/prompt)。这些函数可以简化 Dialog 组件的使用。

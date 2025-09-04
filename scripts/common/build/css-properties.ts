@@ -35,9 +35,17 @@ type TypographyProperty = 'weight' | 'line-height' | 'size' | 'tracking';
 
 /**
  * CSS 自定义属性，用于写入到 css-data.{language}.json 及 web-types.{language}.json 中
+ * @param language i18n 语言
+ * @param pathLanguage 文档路径中的语言，不传该参数，则使用 language；传入 null 则使用不含语言的路径
  */
-export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
+export const getCssProperties = (
+  language: I18nLanguage,
+  _pathLanguage?: I18nLanguage | null,
+): CSSProperty[] => {
   const i18nData = getI18nData(language);
+
+  const pathLanguage = _pathLanguage === undefined ? language : _pathLanguage;
+  const languagePath = pathLanguage ? `${pathLanguage}/` : '';
 
   // 断点
   const getBreakpoints = (): CSSProperty[] => {
@@ -62,7 +70,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
             '{{newWidth}}',
             (breakpoint === 'xs' ? 0 : width + 20).toString(),
           ),
-        docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#breakpoint`,
+        docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#breakpoint`,
       };
     });
   };
@@ -113,7 +121,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
           'scrim',
         ].map((color) => {
           const colorName = color.split('-').map(ucfirst).join(' ');
-          const docUrl = `${docOrigin}/${language}/docs/2/styles/design-tokens#color`;
+          const docUrl = `${docOrigin}/${languagePath}docs/2/styles/design-tokens#color`;
 
           if (theme) {
             // 亮色、或暗色
@@ -166,7 +174,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
         description: i18nData.cssProperties.elevation.description
           .replaceAll('{{name}}', name)
           .replaceAll('{{value}}', elevation.toString()),
-        docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#elevation`,
+        docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#elevation`,
       };
     });
   };
@@ -192,7 +200,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
         description: i18nData.cssProperties.easing.description
           .replaceAll('{{name}}', name)
           .replaceAll('{{easingName}}', easingName),
-        docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#motion`,
+        docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#motion`,
       };
     });
   };
@@ -213,7 +221,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
               .replaceAll('{{name}}', name)
               .replaceAll('{{value}}', duration)
               .replaceAll('{{level}}', level.toString()),
-            docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#motion`,
+            docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#motion`,
           };
         });
       })
@@ -240,7 +248,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
         description: i18nData.cssProperties.corner.description
           .replaceAll('{{name}}', name)
           .replaceAll('{{value}}', corner),
-        docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#shape-corner`,
+        docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#shape-corner`,
       };
     });
   };
@@ -257,7 +265,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
         description: i18nData.cssProperties.stateLayer.description
           .replaceAll('{{name}}', name)
           .replaceAll('{{state}}', stateLayer),
-        docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#state-layer`,
+        docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#state-layer`,
       };
     });
   };
@@ -313,7 +321,7 @@ export const getCssProperties = (language: I18nLanguage): CSSProperty[] => {
                 .replaceAll('{{name}}', name)
                 .replaceAll('{{setValue}}', setValue.toString())
                 .replaceAll('{{cssPropertyName}}', cssPropertyName),
-              docUrl: `${docOrigin}/${language}/docs/2/styles/design-tokens#typescale`,
+              docUrl: `${docOrigin}/${languagePath}docs/2/styles/design-tokens#typescale`,
             };
           });
         });

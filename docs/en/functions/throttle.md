@@ -1,3 +1,5 @@
+# throttle Function
+
 The `throttle` function is used to create a throttled function that can be executed at most once within a specified time interval.
 
 ## Usage {#usage}
@@ -12,9 +14,12 @@ Example:
 
 ```js
 // This function executes at most once within 100 milliseconds, preventing frequent calls during scrolling
-window.addEventListener('scroll', throttle(() => {
-  console.log('update');
-}, 100));
+window.addEventListener(
+  'scroll',
+  throttle(() => {
+    console.log('update');
+  }, 100),
+);
 ```
 
 ## API {#api}

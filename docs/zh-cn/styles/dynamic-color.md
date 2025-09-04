@@ -1,3 +1,5 @@
+# 动态配色
+
 mdui 提供了动态配色功能。只需提供一个颜色值，mdui 就能自动生成一套完整的配色方案。此外，mdui 还支持从指定的壁纸中提取主色调，并据此生成配色方案。
 
 你可以随时点击文档页面右上角的 <mdui-icon name="palette--outlined" style="vertical-align: middle"></mdui-icon> 图标，切换配色方案，查看各个组件在不同配色方案下的显示效果。
@@ -22,7 +24,7 @@ import { setColorScheme } from 'mdui/functions/setColorScheme.js';
 
 // 根据 #0061a4 生成一套配色方案，并将 .foo 元素设置为该配色方案
 setColorScheme('#0061a4', {
-  target: document.querySelector('.foo')
+  target: document.querySelector('.foo'),
 });
 ```
 
@@ -36,22 +38,22 @@ setColorScheme('#0061a4', {
   customColors: [
     {
       name: 'error',
-      value: '#69F0AE'
+      value: '#69F0AE',
     },
     {
       name: 'music',
-      value: '#FFC107'
-    }
-  ]
+      value: '#FFC107',
+    },
+  ],
 });
 ```
 
 一组自定义颜色组包含四个 CSS 自定义属性：
 
-* `--mdui-color-{name}`
-* `--mdui-color-on-{name}`
-* `--mdui-color-{name}-container`
-* `--mdui-color-on-{name}-container`
+- `--mdui-color-{name}`
+- `--mdui-color-on-{name}`
+- `--mdui-color-{name}-container`
+- `--mdui-color-on-{name}-container`
 
 其中的 `{name}` 为你传入的 `customColors` 中的 `name` 字段名，即自定义颜色名。
 
@@ -91,5 +93,5 @@ import { setColorScheme } from 'mdui/functions/setColorScheme.js';
 const image = new Image();
 image.src = 'image1.png';
 
-getColorFromImage(image).then(color => setColorScheme(color));
+getColorFromImage(image).then((color) => setColorScheme(color));
 ```

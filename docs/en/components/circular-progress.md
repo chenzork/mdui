@@ -1,3 +1,5 @@
+# Circular Progress Component
+
 Circular progress indicators are used to show the progress of ongoing tasks.
 
 ## Usage {#usage}
@@ -22,7 +24,7 @@ Example:
 
 ## Examples {#examples}
 
-### Determinate Progress  {#example-value}
+### Determinate Progress {#example-value}
 
 By default, the circular progress indicator is in an indeterminate state. To set the current progress, use the `value` attribute. The default maximum progress value is `1`.
 

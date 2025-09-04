@@ -1,3 +1,5 @@
+# Select Component
+
 The Select component is designed to present a list of options in a dropdown menu.
 
 This guide focuses on the usage of the `<mdui-select>` component. For information on dropdown menu items, please refer to the [`<mdui-menu-item>`](/en/docs/2/components/menu#menu-item-api) section.

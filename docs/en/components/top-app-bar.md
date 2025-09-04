@@ -1,3 +1,5 @@
+# Top App Bar Component
+
 The Top App Bar provides information and actions related to the current screen, serving as a tool for branding, navigation, search, and actions.
 
 ## Usage {#usage}
@@ -97,9 +99,9 @@ The `scroll-behavior` attribute on the `<mdui-top-app-bar>` component defines th
 
 Scroll behaviors include:
 
-* `hide`: Hides the top app bar when scrolling down and shows it when scrolling up.
-* `shrink`: Effective when `variant` is `medium` or `large`. Expands the top app bar when scrolling down and shrinks it when scrolling up.
-* `elevate`: Adds a shadow to the top app bar when scrolling down and removes the shadow when scrolling back to the top.
+- `hide`: Hides the top app bar when scrolling down and shows it when scrolling up.
+- `shrink`: Effective when `variant` is `medium` or `large`. Expands the top app bar when scrolling down and shrinks it when scrolling up.
+- `elevate`: Adds a shadow to the top app bar when scrolling down and removes the shadow when scrolling back to the top.
 
 The `scroll-threshold` attribute sets the number of pixels to start the scroll behavior of the top app bar. (Do not set the `scroll-threshold` attribute when using the `elevate` scroll behavior to respond promptly)
 

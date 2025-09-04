@@ -1,3 +1,5 @@
+# Avatar Component
+
 Avatars represent users or entities by displaying images, icons, or characters.
 
 ## Usage {#usage}

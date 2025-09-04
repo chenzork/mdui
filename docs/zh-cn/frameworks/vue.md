@@ -1,3 +1,5 @@
+# 与 Vue 集成
+
 在 Vue 中使用 mdui 时，首先需要按照 [安装](/zh-cn/docs/2/getting-started/installation#npm) 页面的指引完成安装，然后进行一些必要的配置。
 
 ## 配置 {#configuration}
@@ -6,7 +8,7 @@
 
 ```js
 // vite.config.js
-import vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue';
 
 export default {
   plugins: [
@@ -14,12 +16,12 @@ export default {
       template: {
         compilerOptions: {
           // 所有以 mdui- 开头的标签名都是 mdui 组件
-          isCustomElement: (tag) => tag.startsWith('mdui-')
-        }
-      }
-    })
-  ]
-}
+          isCustomElement: (tag) => tag.startsWith('mdui-'),
+        },
+      },
+    }),
+  ],
+};
 ```
 
 关于这个配置的详细信息，你可以参考 [Vue 官方文档](https://cn.vuejs.org/guide/extras/web-components.html#using-custom-elements-in-vue)。

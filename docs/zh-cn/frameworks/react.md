@@ -1,3 +1,5 @@
+# 与 React 集成
+
 在 React 中使用 mdui 时，只需要按照 [安装](/zh-cn/docs/2/getting-started/installation#npm) 页面的步骤完成安装即可。
 
 ## 注意事项 {#notes}
@@ -20,7 +22,7 @@ function App() {
 
   useEffect(() => {
     const handleToggle = () => {
-      console.log("switch is toggled");
+      console.log('switch is toggled');
     };
 
     switchRef.current.addEventListener('change', handleToggle);
@@ -30,9 +32,7 @@ function App() {
     };
   }, []);
 
-  return (
-    <mdui-switch ref={switchRef}></mdui-switch>
-  );
+  return <mdui-switch ref={switchRef}></mdui-switch>;
 }
 
 export default App;

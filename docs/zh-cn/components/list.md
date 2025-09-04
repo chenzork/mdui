@@ -1,3 +1,5 @@
+# 列表组件 List
+
 列表是一种垂直排列的索引，用于展示文本或图片，便于用户快速浏览和访问相关信息。
 
 ## 使用方法 {#usage}
@@ -144,9 +146,9 @@ import type { ListSubheader } from 'mdui/components/list-subheader.js';
 
 在 `<mdui-list-item>` 组件上设置 `alignment` 属性，可以调整列表项左右两侧元素与列表项的对齐方式。其值可以为：
 
-* `start`：顶部对齐
-* `center`：居中对齐
-* `end`：底部对齐
+- `start`：顶部对齐
+- `center`：居中对齐
+- `end`：底部对齐
 
 ```html,example,expandable,playgroundId=293
 <mdui-list>

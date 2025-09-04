@@ -1,3 +1,5 @@
+# snackbar Function
+
 The `snackbar` function provides a simple method to utilize the [`<mdui-snackbar>`](/en/docs/2/components/snackbar) component without the need to write HTML code.
 
 ## Usage {#usage}

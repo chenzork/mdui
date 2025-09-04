@@ -1,7 +1,8 @@
+# getColorFromImage Function
+
 The `getColorFromImage` function is designed to extract the dominant color from an image.
 
 The extracted color can be used in conjunction with the [`setColorScheme`](/en/docs/2/functions/setColorScheme) function to implement [dynamic color](/en/docs/2/styles/dynamic-color) functionality.
-
 
 ## Usage {#usage}
 
@@ -15,9 +16,9 @@ Example:
 
 ```js
 const image = new Image();
-image.src = "demo.png";
+image.src = 'demo.png';
 
-getColorFromImage(image).then(color => {
+getColorFromImage(image).then((color) => {
   console.log(color);
 });
 ```

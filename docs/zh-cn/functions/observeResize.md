@@ -1,3 +1,5 @@
+# observeResize 函数
+
 `observeResize` 函数用于监听元素尺寸的变化，当尺寸发生变化时，会执行指定的回调函数。
 
 该函数使用 [`ResizeObserver`](https://developer.mozilla.org/zh-CN/docs/Web/API/ResizeObserver) 实现，但采用了单例模式，因此性能更优。
@@ -14,7 +16,7 @@ import { observeResize } from 'mdui/functions/observeResize.js';
 
 ```js
 // 监听 document.body 的尺寸变化
-const observer = observeResize(document.body, function(entry, observer) {
+const observer = observeResize(document.body, function (entry, observer) {
   // 此时 document.body 的尺寸发生了变化，可通过 entry 获取新的尺寸
   console.log(entry);
 

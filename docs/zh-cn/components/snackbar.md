@@ -1,3 +1,5 @@
+# 消息条组件 Snackbar
+
 消息条组件用于在页面中展示简短的应用程序进程信息。
 
 除了直接使用该组件外，mdui 还提供了一个 [`mdui.snackbar`](/zh-cn/docs/2/functions/snackbar) 函数，以简化 Snackbar 组件的使用。

@@ -1,3 +1,5 @@
+# Card Component
+
 Cards are versatile components that serve as containers for content and actions about a single subject.
 
 ## Usage {#usage}

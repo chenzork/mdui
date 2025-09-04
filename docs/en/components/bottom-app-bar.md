@@ -1,3 +1,5 @@
+# Bottom App Bar Component
+
 The Bottom App Bar provides navigation and key actions at the bottom of a mobile page.
 
 ## Usage {#usage}

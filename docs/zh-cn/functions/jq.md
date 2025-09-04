@@ -1,3 +1,5 @@
+# jq 工具库
+
 mdui 内置了一个轻量级的 JavaScript 工具库，它提供了类似于 jQuery 的 API 和链式调用方式，但其体积只有 jQuery 的六分之一。
 
 你可以按需导入该工具函数：
@@ -35,7 +37,9 @@ $(`<div id="wrapper">
 传入一个函数，当 DOM 加载完毕后会调用该函数。
 
 ```js
-$(function () { console.log('DOM Loaded') });
+$(function () {
+  console.log('DOM Loaded');
+});
 ```
 
 ## 扩展 {#api-extend}
@@ -46,7 +50,7 @@ $(function () { console.log('DOM Loaded') });
 
 ```js
 $.extend({
-  customFunc: function () {}
+  customFunc: function () {},
 });
 
 // 然后就可以这样调用自定义方法了
@@ -56,11 +60,7 @@ $.customFunc();
 如果传入了两个或更多个对象，所有对象的属性都添加到第一个对象，并返回合并后的对象。不过值为 `undefined` 的属性不会合并。
 
 ```js
-const object = $.extend(
-  { key1: val1 },
-  { key2: val2 },
-  { key3: val3 }
-);
+const object = $.extend({ key1: val1 }, { key2: val2 }, { key3: val3 });
 
 // 此时第一个对象和返回值都是 { key1: val1, key2: val2, key3: val3 }
 ```
@@ -71,7 +71,7 @@ const object = $.extend(
 
 ```js
 $.fn.extend({
-  customFunc: function () {}
+  customFunc: function () {},
 });
 
 // 然后就可以这样使用扩展的方法了
@@ -99,8 +99,8 @@ $.param({ ids: [1, 2, 3] });
 
 ```js
 $.param([
-  { "name": "name", "value": "mdui" },
-  { "name": "password", "value": "123456" }
+  { name: 'name', value: 'mdui' },
+  { name: 'password', value: '123456' },
 ]);
 // name=mdui&password=123456
 ```
@@ -129,7 +129,7 @@ $.each(['a', 'b', 'c'], function (index, value) {
 
 ```js
 // 遍历对象
-$.each({'name': 'mdui', 'lang': 'zh'}, function (key, value) {
+$.each({ name: 'mdui', lang: 'zh' }, function (key, value) {
   console.log(key + ':' + value);
 });
 
@@ -186,9 +186,12 @@ console.log(result); // [1, 2, 2, 3, 3, 4]
 
 ```js
 // 遍历对象
-const result = $.map({ name: 'mdui', password: '123456' }, function (value, key) {
-  return key + ':' + value;
-});
+const result = $.map(
+  { name: 'mdui', password: '123456' },
+  function (value, key) {
+    return key + ':' + value;
+  },
+);
 console.log(result); // ['name:mdui', 'password:123456']
 ```
 
@@ -242,7 +245,7 @@ $('body').length; // 1
 函数的第一个参数是元素的索引位置，第二个参数是当前元素。在函数内部，`this` 指向当前元素。
 
 ```js
-$('img').each(function(index, element) {
+$('img').each(function (index, element) {
   this.src = 'test' + index + '.jpg';
 });
 ```
@@ -478,7 +481,7 @@ $('input').prop({
   checked: false,
   disabled: function (index, oldPropValue) {
     return true;
-  }
+  },
 });
 ```
 
@@ -523,7 +526,7 @@ $('div').attr({
   username: 'mdui',
   lastname: function (index, oldAttrValue) {
     return 'test';
-  }
+  },
 });
 ```
 
@@ -726,7 +729,7 @@ $('.box').css('color');
 
 ```js
 // 设置集合中所有元素的样式值
-$('.box').css('color', 'red')
+$('.box').css('color', 'red');
 
 // 通过回调函数的返回值设置所有元素的样式值
 $('.box').css('color', function (index, oldCSSValue) {
@@ -990,7 +993,7 @@ $('.box').position(); // { top: 20, left: 30 }
 
 ```js
 // 找到 #box 的后代节点中，包含 .box 的节点集合
-$('#box').find('.box')
+$('#box').find('.box');
 ```
 
 ### `.children()` {#children}
@@ -1263,7 +1266,7 @@ $('<p>Hello</p>').append(function (index, oldHTML) {
 该方法返回原始集合。
 
 ```js
-$('<p>Hello</p>').appendTo('<p>I would like to say: </p>')
+$('<p>Hello</p>').appendTo('<p>I would like to say: </p>');
 // 结果：<p>I would like to say: <p>Hello</p></p>
 ```
 
@@ -1381,7 +1384,7 @@ $('.new').replaceAll('.box');
 该方法使用原生 `cloneNode` 方法进行深度克隆，但不会复制数据和事件处理程序到新的元素。这点和 jQuery 中利用一个参数来确定是否复制数据和事件处理不相同。
 
 ```js
-$('body').append($("#box").clone())
+$('body').append($('#box').clone());
 ```
 
 ## 表单 {#api-form}
@@ -1410,7 +1413,7 @@ $('form').serializeArray();
 该方法可以对单独的表单元素进行操作，也可以对整个 `<form>` 表单进行操作。
 
 ```js
-$('form').serializeObject()
+$('form').serializeObject();
 // { name: mdui, password: 123456 }
 ```
 
@@ -1447,12 +1450,12 @@ $(document).on('click', '.box', function (e) {
 
 // 同时绑定多个事件和事件处理函数
 $('.box').on({
-  'click': function (e) {
+  click: function (e) {
     console.log('触发了 click 事件');
   },
-  'focus': function (e) {
+  focus: function (e) {
     console.log('触发了 focus 事件');
-  }
+  },
 });
 
 // 传入参数
@@ -1462,44 +1465,59 @@ $('.box').on('click', { key1: 'value1', key2: 'value2' }, function (e) {
 });
 
 // 同时绑定多个事件和事件处理函数，并传入参数
-$('.box').on({
-  'click': function (e) {
-    console.log('触发了 click 事件');
-    // e._data 为 {key1: 'value1', key2: 'value2'}
+$('.box').on(
+  {
+    click: function (e) {
+      console.log('触发了 click 事件');
+      // e._data 为 {key1: 'value1', key2: 'value2'}
+    },
+    focus: function (e) {
+      console.log('触发了 focus 事件');
+      // e._data 为 {key1: 'value1', key2: 'value2'}
+    },
   },
-  'focus': function (e) {
-    console.log('触发了 focus 事件');
-    // e._data 为 {key1: 'value1', key2: 'value2'}
-  }
-}, { key1: 'value1', key2: 'value2' });
+  { key1: 'value1', key2: 'value2' },
+);
 
 // 通过事件委托绑定事件，并传入参数
-$(document).on('click', '.box', { key1: 'value1', keys: 'value2' }, function (e) {
-  console.log('点击了 .box 元素，并为事件处理函数传入了参数');
-  // e._data 为 {key1: 'value1', key2: 'value2'}
-});
+$(document).on(
+  'click',
+  '.box',
+  { key1: 'value1', keys: 'value2' },
+  function (e) {
+    console.log('点击了 .box 元素，并为事件处理函数传入了参数');
+    // e._data 为 {key1: 'value1', key2: 'value2'}
+  },
+);
 
 // 通过事件委托同时绑定多个事件和事件处理函数
-$(document).on({
-  'click': function (e) {
-    console.log('触发了 click 事件');
+$(document).on(
+  {
+    click: function (e) {
+      console.log('触发了 click 事件');
+    },
+    focus: function (e) {
+      console.log('触发了 focus 事件');
+    },
   },
-  'focus': function (e) {
-    console.log('触发了 focus 事件');
-  }
-}, '.box');
+  '.box',
+);
 
 // 通过事件委托同时绑定多个事件和事件处理函数，并传入参数
-$(document).on({
-  'click': function (e) {
-    console.log('触发了 click 事件');
-    // e._data 为 {key1: 'value1', key2: 'value2'}
+$(document).on(
+  {
+    click: function (e) {
+      console.log('触发了 click 事件');
+      // e._data 为 {key1: 'value1', key2: 'value2'}
+    },
+    focus: function (e) {
+      console.log('触发了 focus 事件');
+      // e._data 为 {key1: 'value1', key2: 'value2'}
+    },
   },
-  'focus': function (e) {
-    console.log('触发了 focus 事件');
-    // e._data 为 {key1: 'value1', key2: 'value2'}
-  }
-}, '.box', { key1: 'value1', key2: 'value2' });
+  '.box',
+  { key1: 'value1', key2: 'value2' },
+);
 
 // 获取事件参数
 $('.box').on('click', function (e, data) {
@@ -1543,15 +1561,18 @@ $(document).off('click', '.box', callback);
 
 // 同时解绑多个事件处理函数
 $('.box.').off({
-  'click': callback1,
-  'focus': callback2,
+  click: callback1,
+  focus: callback2,
 });
 
 // 同时解绑多个通过事件委托绑定的事件处理函数
-$(document).off({
-  'click': callback1,
-  'focus': callback2,
-}, '.box');
+$(document).off(
+  {
+    click: callback1,
+    focus: callback2,
+  },
+  '.box',
+);
 
 // 事件名支持使用命名空间，下面的用法将解绑所有以 .myPlugin 结尾的事件
 $(document).off('.myPlugin');
@@ -1591,7 +1612,7 @@ $.ajaxSetup({
   global: false,
 
   // 默认使用 POST 方法发送请求
-  method: 'POST'
+  method: 'POST',
 });
 ```
 
@@ -1607,11 +1628,11 @@ const promise = $.ajax({
   url: './test.php',
   data: {
     key1: 'val1',
-    key2: 'val2'
+    key2: 'val2',
   },
   success: function (response) {
     console.log(response);
-  }
+  },
 });
 
 promise

@@ -1,3 +1,5 @@
+# Introduction
+
 Let's begin by incorporating mdui into a basic page template using a CDN.
 
 > You are currently reading the documentation for mdui 2!
@@ -15,7 +17,7 @@ For npm installation instructions, refer to the [Installation](/en/docs/2/gettin
 Add the following lines to your page's `<head>` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
 <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
 ```
 

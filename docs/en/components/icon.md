@@ -1,3 +1,5 @@
+# Icon Component
+
 The Icon component represents common actions and supports both Material Icons and SVG icons.
 
 ## Usage {#usage}
@@ -26,19 +28,34 @@ To use Material Icons, import the CSS file for the desired variant: Filled, Outl
 
 ```html
 <!-- Filled -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
 
 <!-- Outlined -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+  rel="stylesheet"
+/>
 
 <!-- Rounded -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+  rel="stylesheet"
+/>
 
 <!-- Sharp -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+  rel="stylesheet"
+/>
 
 <!-- Two Tone -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone"
+  rel="stylesheet"
+/>
 ```
 
 Use the `name` attribute to specify the icon, appending the variant name as a suffix (no suffix needed for Filled). Here's how to use the `delete` icon in all 5 variants:

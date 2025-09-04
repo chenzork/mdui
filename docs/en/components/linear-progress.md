@@ -1,3 +1,5 @@
+# Linear Progress Component
+
 Linear progress indicators are horizontal bars that display the status of ongoing operations, such as data loading or form submission.
 
 ## Usage {#usage}

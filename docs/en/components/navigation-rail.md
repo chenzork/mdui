@@ -1,3 +1,5 @@
+# Navigation Rail Component
+
 The navigation rail provides a means to access different primary pages on tablets and desktop computers.
 
 ## Usage {#usage}

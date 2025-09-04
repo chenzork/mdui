@@ -1,3 +1,5 @@
+# dialog 函数
+
 `dialog` 函数是对 [`<mdui-dialog>`](/zh-cn/docs/2/components/dialog) 组件的封装，使用该函数，你无需编写组件的 HTML 代码，就能打开一个对话框。
 
 ## 使用方法 {#usage}

@@ -1,3 +1,5 @@
+# Tooltip Component
+
 Tooltips provide supplementary text information for a specific element, enhancing the comprehension of its function or purpose.
 
 ## Usage {#usage}

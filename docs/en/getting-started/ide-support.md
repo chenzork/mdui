@@ -1,3 +1,5 @@
+# IDE Support
+
 mdui is optimized for VS Code and WebStorm, offering features such as code autocompletion and hover hints.
 
 <style>
@@ -16,12 +18,12 @@ If you've installed mdui via npm, you can enable VS Code IDE support for your pr
 1. Create a `.vscode` directory at your project root.
 2. Inside the `.vscode` directory, create a `settings.json` file.
 3. Add the following code to `settings.json`:
-    ```json
-    {
-      "html.customData": ["./node_modules/mdui/html-data.en.json"],
-      "css.customData": ["./node_modules/mdui/css-data.en.json"]
-    }
-    ```
+   ```json
+   {
+     "html.customData": ["./node_modules/mdui/html-data.en.json"],
+     "css.customData": ["./node_modules/mdui/css-data.en.json"]
+   }
+   ```
 
 If `settings.json` already exists, simply add the above lines to the root of the JSON document. Restart VS Code after making these changes.
 
@@ -42,9 +44,9 @@ WebStorm {#webstorm}
 To enable WebStorm IDE support for mdui installed via npm:
 
 1. Add the following code to the root of your project's `package.json` file:
-    ```
-    web-types: ["./node_modules/mdui/web-types.en.json"]
-    ```
+   ```
+   web-types: ["./node_modules/mdui/web-types.en.json"]
+   ```
 
 If `package.json` already has a `web-types` property, add `./node_modules/mdui/web-types.en.json` to the `web-types` array. Restart WebStorm after these changes.
 

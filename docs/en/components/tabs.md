@@ -1,3 +1,5 @@
+# Tabs Component
+
 Tabs organize content across different screens and views.
 
 ## Usage {#usage}

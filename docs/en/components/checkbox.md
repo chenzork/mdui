@@ -1,3 +1,5 @@
+# Checkbox Component
+
 Checkboxes allow users to select one or more options from a set. Each checkbox can toggle between checked and unchecked states.
 
 ## Usage {#usage}

@@ -1,3 +1,5 @@
+# 图标组件 Icon
+
 图标用于表示常见的操作。它支持 Material Icons 图标，也支持使用 SVG 图标。
 
 ## 使用方法 {#usage}
@@ -26,19 +28,34 @@ import type { Icon } from 'mdui/components/icon.js';
 
 ```html
 <!-- Filled -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
 
 <!-- Outlined -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+  rel="stylesheet"
+/>
 
 <!-- Rounded -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+  rel="stylesheet"
+/>
 
 <!-- Sharp -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+  rel="stylesheet"
+/>
 
 <!-- Two Tone -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone"
+  rel="stylesheet"
+/>
 ```
 
 使用组件时，在 `name` 属性中传入图标名称，并以图标变体名称为后缀（Filled 变体无需添加后缀），下面是 `delete` 图标的 5 种变体的使用方式：

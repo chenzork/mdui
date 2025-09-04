@@ -1,3 +1,5 @@
+# throttle 函数
+
 `throttle` 函数用于创建一个节流函数，该函数在指定的时间间隔内最多只执行一次。
 
 ## 使用方法 {#usage}
@@ -12,9 +14,12 @@ import { throttle } from 'mdui/functions/throttle.js';
 
 ```js
 // 这个函数在 100 毫秒内最多执行一次，可避免在滚动时过于频繁地调用该函数
-window.addEventListener('scroll', throttle(() => {
-  console.log('update');
-}, 100));
+window.addEventListener(
+  'scroll',
+  throttle(() => {
+    console.log('update');
+  }, 100),
+);
 ```
 
 ## API {#api}

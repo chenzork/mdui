@@ -1,12 +1,14 @@
+# Localization
+
 mdui uses English by default. If you wish to use other languages, you'll need to do some localization configuration.
 
 ## Usage {#usage}
 
 mdui provides three functions for localization:
 
-* [`loadLocale`](/en/docs/2/functions/loadLocale): Loads locale modules. Accepts a function that takes a locale code and returns a Promise resolving to the locale module. Ensure to call this function in your project's entry file.
-* [`setLocale`](/en/docs/2/functions/setLocale): Begins switching the active locale to the given locale code, and returns a promise that resolves when the new locale has loaded.
-* [`getLocale`](/en/docs/2/functions/getLocale): Returns the active locale code.
+- [`loadLocale`](/en/docs/2/functions/loadLocale): Loads locale modules. Accepts a function that takes a locale code and returns a Promise resolving to the locale module. Ensure to call this function in your project's entry file.
+- [`setLocale`](/en/docs/2/functions/setLocale): Begins switching the active locale to the given locale code, and returns a promise that resolves when the new locale has loaded.
+- [`getLocale`](/en/docs/2/functions/getLocale): Returns the active locale code.
 
 Example usage:
 
@@ -82,7 +84,9 @@ window.addEventListener('mdui-localize-status', (event) => {
   } else if (event.detail.status === 'ready') {
     console.log(`Loaded new locale: ${event.detail.readyLocale}`);
   } else if (event.detail.status === 'error') {
-    console.error(`Error loading locale ${event.detail.errorLocale}: ${event.detail.errorMessage}`);
+    console.error(
+      `Error loading locale ${event.detail.errorLocale}: ${event.detail.errorMessage}`,
+    );
   }
 });
 ```
@@ -108,7 +112,7 @@ import { loadLocale } from 'mdui/functions/loadLocale.js';
 
 const localizedTemplates = new Map([
   ['zh-cn', import(`../node_modules/mdui/locales/zh-cn.js`)],
-  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)]
+  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));
@@ -125,7 +129,7 @@ import * as locale_zh_tw from 'mdui/locales/zh-tw.js';
 
 const localizedTemplates = new Map([
   ['zh-cn', locale_zh_cn],
-  ['zh-tw', locale_zh_tw]
+  ['zh-tw', locale_zh_tw],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));
@@ -139,8 +143,10 @@ When using mdui via CDN, you can directly load locale modules from the CDN:
 <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
 
 <script>
-mdui.loadLocale((locale) => import(`https://unpkg.com/mdui@2/locales/${locale}.js`));
-mdui.setLocale('zh-cn');
+  mdui.loadLocale(
+    (locale) => import(`https://unpkg.com/mdui@2/locales/${locale}.js`),
+  );
+  mdui.setLocale('zh-cn');
 </script>
 ```
 
@@ -217,4 +223,4 @@ mdui supports the following locales:
 
 ## Submitting New Translations or Improvements {#contribute}
 
-To contribute new translations or improvements to existing translations, please submit a pull request on GitHub.  Translations are located in [`packages/mdui/src/xliff`](https://github.com/zdhxiong/mdui/tree/v2/packages/mdui/src/xliff) and can be edited directly on GitHub if you don’t want to clone the repo locally.
+To contribute new translations or improvements to existing translations, please submit a pull request on GitHub. Translations are located in [`packages/mdui/src/xliff`](https://github.com/zdhxiong/mdui/tree/v2/packages/mdui/src/xliff) and can be edited directly on GitHub if you don’t want to clone the repo locally.

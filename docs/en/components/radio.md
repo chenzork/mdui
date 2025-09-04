@@ -1,3 +1,5 @@
+# Radio Component
+
 The radio group component is designed for selecting a single option from a set of options.
 
 ## Usage {#usage}

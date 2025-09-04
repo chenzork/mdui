@@ -1,3 +1,5 @@
+# Dropdown Component
+
 The Dropdown component displays specific content in a pop-up control. It is often used in conjunction with the Menu component.
 
 ## Usage {#usage}

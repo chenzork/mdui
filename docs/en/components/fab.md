@@ -1,3 +1,5 @@
+# Fab Component
+
 The Floating Action Button (FAB) is a primary component for key actions, offering easy access.
 
 ## Usage {#usage}

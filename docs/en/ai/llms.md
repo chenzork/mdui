@@ -1,3 +1,5 @@
+# LLMs.txt
+
 mdui provides two files: `llms.txt` and `llms-full.txt`. They give large language models (LLMs) accurate, citable context so the model can answer mdui questions more reliably.
 
 ## Use llms.txt to provide context to AI {#context}

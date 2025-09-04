@@ -1,3 +1,5 @@
+# loadLocale 函数
+
 `loadLocale` 函数用于加载语言包。详见 [本地化](/zh-cn/docs/2/getting-started/localization)。
 
 ## 使用方法 {#usage}
@@ -21,7 +23,7 @@ loadLocale((locale) => import(`../node_modules/mdui/locales/${locale}.js`));
 ```js
 const localizedTemplates = new Map([
   ['zh-cn', import(`../node_modules/mdui/locales/zh-cn.js`)],
-  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)]
+  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));
@@ -35,7 +37,7 @@ import * as locale_zh_tw from 'mdui/locales/zh-tw.js';
 
 const localizedTemplates = new Map([
   ['zh-cn', locale_zh_cn],
-  ['zh-tw', locale_zh_tw]
+  ['zh-tw', locale_zh_tw],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));

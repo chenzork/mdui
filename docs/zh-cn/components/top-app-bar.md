@@ -1,3 +1,5 @@
+# 顶部应用栏组件 TopAppBar
+
 顶部应用栏用于在页面顶部展示关键信息和相关操作，为用户提供清晰的导航和方便的功能访问。
 
 ## 使用方法 {#usage}
@@ -97,9 +99,9 @@ import type { TopAppBarTitle } from 'mdui/components/top-app-bar-title.js';
 
 滚动行为包括：
 
-* `hide`：页面向下滚动时隐藏顶部应用栏，向上滚动时显示顶部应用栏。
-* `shrink`：仅在 `variant` 属性为 `medium` 或 `large` 时有效。页面向下滚动时展开顶部应用栏，向上滚动时收缩顶部应用栏。
-* `elevate`：页面向下滚动时，在顶部应用栏上添加阴影；页面滚回到顶部时，取消阴影。
+- `hide`：页面向下滚动时隐藏顶部应用栏，向上滚动时显示顶部应用栏。
+- `shrink`：仅在 `variant` 属性为 `medium` 或 `large` 时有效。页面向下滚动时展开顶部应用栏，向上滚动时收缩顶部应用栏。
+- `elevate`：页面向下滚动时，在顶部应用栏上添加阴影；页面滚回到顶部时，取消阴影。
 
 使用 `scroll-threshold` 属性，可以设置滚动多少像素后开始触发顶部应用栏的滚动行为。（注意，为了响应及时，在使用了 `elevate` 滚动行为时，请不要再设置 `scroll-threshold` 属性。）
 
@@ -190,7 +192,6 @@ import type { TopAppBarTitle } from 'mdui/components/top-app-bar-title.js';
 ### 展开状态的文本 {#label-large}
 
 对于 `variant` 属性为 `medium` 或 `large`，且 `scroll-behavior` 属性为 `shrink` 的顶部应用栏，你可以在 `<mdui-top-app-bar-title>` 组件中添加 `label-large` slot，以设置展开状态下的文本。
-
 
 ```html,example,expandable,playgroundId=427
 <div style="position: relative;overflow: hidden">

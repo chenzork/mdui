@@ -1,0 +1,36 @@
+{
+  "name": "@mdui/mcp",
+  "version": "2.1.0",
+  "description": "mdui MCP Server",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "mdui-mcp": "stdio.js"
+  },
+  "files": [
+    "data",
+    "tools",
+    "index.{js,d.ts}",
+    "server.{js,d.ts}",
+    "stdio.{js,d.ts}",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdhxiong/mdui.git"
+  },
+  "author": "zdhxiong <zdhxiong@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zdhxiong/mdui/issues"
+  },
+  "homepage": "https://www.mdui.org",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "zod": "^3.25.76",
+    "tslib": "^2.8.1"
+  }
+}

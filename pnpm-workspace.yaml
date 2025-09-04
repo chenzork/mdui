@@ -3,3 +3,4 @@ packages:
   - 'packages/jq'
   - 'packages/mdui'
   - 'packages/shared'
+  - 'packages/mcp'

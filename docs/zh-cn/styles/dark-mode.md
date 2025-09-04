@@ -1,3 +1,5 @@
+# 暗色模式
+
 mdui 的所有组件都支持暗色模式，并且支持根据操作系统的设置自动切换主题。
 
 <style>
@@ -34,17 +36,13 @@ mdui 的所有组件都支持暗色模式，并且支持根据操作系统的设
 如果要使用暗色模式，只需在 `<html>` 标签上添加 `mdui-theme-dark` 类即可：
 
 ```html
-<html class="mdui-theme-dark">
-
-</html>
+<html class="mdui-theme-dark"></html>
 ```
 
 如果要让主题根据操作系统设置自动切换，只需在 `<html>` 标签上添加 `mdui-theme-auto` 类即可：
 
 ```html
-<html class="mdui-theme-auto">
-
-</html>
+<html class="mdui-theme-auto"></html>
 ```
 
 也可以在页面的不同部分使用不同的主题。例如下面的示例，在 `<html>` 上设置暗色模式，但在页面中的一个 `<div>` 上添加了 `mdui-theme-light` 类，这样该 div 中的元素将显示为亮色模式，而页面其余部分则为暗色模式：
@@ -63,10 +61,10 @@ mdui 的所有组件都支持暗色模式，并且支持根据操作系统的设
 
 除了直接添加 CSS 类外，mdui 还提供了两个函数，可以更便捷的操作主题：
 
-* [`getTheme`](/zh-cn/docs/2/functions/getTheme)：获取当前页面、或指定元素上的主题。
-* [`setTheme`](/zh-cn/docs/2/functions/setTheme)：设置当前页面、或指定元素上的主题。
+- [`getTheme`](/zh-cn/docs/2/functions/getTheme)：获取当前页面、或指定元素上的主题。
+- [`setTheme`](/zh-cn/docs/2/functions/setTheme)：设置当前页面、或指定元素上的主题。
 
-----
+---
 
 需要注意的是，mdui 在 `:root` 及 `.mdui-theme-light`、`.mdui-theme-dark`、`.mdui-theme-auto` 选择器上设置了 `color` 和 `background-color` 样式，如果你不喜欢这些默认样式，可以自行进行覆盖。
 

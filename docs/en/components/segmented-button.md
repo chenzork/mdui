@@ -1,3 +1,5 @@
+# Segmented Button Component
+
 The segmented button group is a component that encapsulates a set of buttons. It is used to provide options, switch views, or sort elements.
 
 ## Usage {#usage}

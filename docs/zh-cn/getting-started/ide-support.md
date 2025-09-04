@@ -1,3 +1,5 @@
+# IDE 支持
+
 mdui 专门为 VS Code 和 WebStorm 进行了优化，在这些 IDE 中可以获得代码自动完成、悬停提示等功能。
 
 <style>
@@ -16,12 +18,12 @@ mdui 专门为 VS Code 和 WebStorm 进行了优化，在这些 IDE 中可以获
 1. 在项目的根目录中创建 `.vscode` 目录。
 2. 在 `.vscode` 目录中创建 `settings.json` 文件。
 3. 将以下代码添加到 `settings.json` 文件中：
-    ```json
-    {
-      "html.customData": ["./node_modules/mdui/html-data.zh-cn.json"],
-      "css.customData": ["./node_modules/mdui/css-data.zh-cn.json"]
-    }
-    ```
+   ```json
+   {
+     "html.customData": ["./node_modules/mdui/html-data.zh-cn.json"],
+     "css.customData": ["./node_modules/mdui/css-data.zh-cn.json"]
+   }
+   ```
 
 如果 `settings.json` 文件已经存在，只需将上述两行代码添加到 JSON 文档的根节点即可。修改完成后，重启 VS Code。
 
@@ -40,9 +42,9 @@ mdui 专门为 VS Code 和 WebStorm 进行了优化，在这些 IDE 中可以获
 如果你通过 npm 安装了 mdui，可以按照以下步骤在当前项目中启用 WebStorm 的 IDE 支持：
 
 1. 在项目根目录的 `package.json` 文件的根节点中添加以下代码：
-    ```
-    web-types: ["./node_modules/mdui/web-types.zh-cn.json"]
-    ```
+   ```
+   web-types: ["./node_modules/mdui/web-types.zh-cn.json"]
+   ```
 
 如果 `package.json` 文件的根节点已存在 `web-types` 属性，只需将 `./node_modules/mdui/web-types.zh-cn.json` 添加到 `web-types` 数组中即可。修改完成后，重启 WebStorm。
 

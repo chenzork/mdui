@@ -1,10 +1,14 @@
-## Why Don't Components Display with Self-Closing Tags?  {#no-self-closing}
+# Frequently Asked Questions
+
+Here are the frequently asked questions about mdui that you should look up before you ask in community or create new issue.
+
+## Why Don't Components Display with Self-Closing Tags? {#no-self-closing}
 
 mdui is a library based on Web Components. Web Components do not support self-closing tags, so you should always use closing tags with mdui components.
 
 ```html
 <!-- Incorrect usage -->
-<mdui-text-field/>
+<mdui-text-field />
 
 <!-- Correct usage -->
 <mdui-text-field></mdui-text-field>
@@ -42,7 +46,7 @@ In the following example, the `<body>` element is initially hidden using `opacit
   await Promise.allSettled([
     customElements.whenDefined('mdui-button'),
     customElements.whenDefined('mdui-card'),
-    customElements.whenDefined('mdui-checkbox')
+    customElements.whenDefined('mdui-checkbox'),
   ]);
 
   // After registering the button, card, and checkbox components, add the 'ready' class to fade in the page

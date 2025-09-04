@@ -1,3 +1,5 @@
+# 快速入门
+
 mdui 的组件都是标准的 Web Components 组件，你可以像使用 `<div>` 标签一样使用 mdui 组件。每个组件的文档中都详细描述了其完整的 API，包括属性、方法、事件、slot、CSS Part、CSS 自定义属性等。
 
 本章文档将向你介绍 Web Components 的使用方法。

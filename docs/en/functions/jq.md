@@ -1,3 +1,5 @@
+# JavaScript Library
+
 mdui includes a lightweight JavaScript utility library that provides a jQuery-like API with chainable calls, but at only a fraction of jQuery's size.
 
 Import the function:
@@ -35,7 +37,9 @@ $(`<div id="wrapper">
 Pass a function to be called when the DOM is fully loaded.
 
 ```js
-$(function () { console.log('DOM Loaded') });
+$(function () {
+  console.log('DOM Loaded');
+});
 ```
 
 ## Extension {#api-extend}
@@ -46,7 +50,7 @@ Passing a single object merges its properties into the `$` object, effectively a
 
 ```js
 $.extend({
-  customFunc: function () {}
+  customFunc: function () {},
 });
 
 // Now you can call the custom method like this
@@ -56,11 +60,7 @@ $.customFunc();
 Passing two or more objects merges all properties from each object into the first one. The merged object is returned. Note that properties with a value of `undefined` are not merged.
 
 ```js
-const object = $.extend(
-  { key1: val1 },
-  { key2: val2 },
-  { key3: val3 }
-);
+const object = $.extend({ key1: val1 }, { key2: val2 }, { key3: val3 });
 
 // Both the first object and the returned value are now { key1: val1, key2: val2, key3: val3 }
 ```
@@ -71,7 +71,7 @@ This method extends the prototype chain of `$`, adding new methods.
 
 ```js
 $.fn.extend({
-  customFunc: function () {}
+  customFunc: function () {},
 });
 
 // Now you can use the extended method like this
@@ -99,8 +99,8 @@ If the parameter passed is an array, it should be in the format returned by the 
 
 ```js
 $.param([
-  { "name": "name", "value": "mdui" },
-  { "name": "password", "value": "123456" }
+  { name: 'name', value: 'mdui' },
+  { name: 'password', value: '123456' },
 ]);
 // Returns: "name=mdui&password=123456"
 ```
@@ -129,7 +129,7 @@ $.each(['a', 'b', 'c'], function (index, value) {
 
 ```js
 // Iterate over an object
-$.each({'name': 'mdui', 'lang': 'zh'}, function (key, value) {
+$.each({ name: 'mdui', lang: 'zh' }, function (key, value) {
   console.log(key + ':' + value);
 });
 
@@ -186,9 +186,12 @@ console.log(result); // [1, 2, 2, 3, 3, 4]
 
 ```js
 // Iterate over an object
-const result = $.map({ name: 'mdui', password: '123456' }, function (value, key) {
-  return key + ':' + value;
-});
+const result = $.map(
+  { name: 'mdui', password: '123456' },
+  function (value, key) {
+    return key + ':' + value;
+  },
+);
 console.log(result); // ['name:mdui', 'password:123456']
 ```
 
@@ -242,7 +245,7 @@ This method iterates over the current collection, executing a function for each 
 The function's first parameter is the element's index, and the second is the current element. `this` refers to the current element.
 
 ```js
-$('img').each(function(index, element) {
+$('img').each(function (index, element) {
   this.src = 'test' + index + '.jpg';
 });
 ```
@@ -474,7 +477,7 @@ $('input').prop({
   checked: false,
   disabled: function (index, oldPropValue) {
     return true;
-  }
+  },
 });
 ```
 
@@ -519,7 +522,7 @@ $('div').attr({
   username: 'mdui',
   lastname: function (index, oldAttrValue) {
     return 'test';
-  }
+  },
 });
 ```
 
@@ -720,7 +723,7 @@ If the value or the callback function's return value is `undefined`, the CSS pro
 
 ```js
 // Set the 'color' CSS property value
-$('.box').css('color', 'red')
+$('.box').css('color', 'red');
 
 // Set the 'color' CSS property value using the return value of the callback function
 $('.box').css('color', function (index, oldCSSValue) {
@@ -984,7 +987,7 @@ This method finds a collection of specified descendant elements based on a CSS s
 
 ```js
 // Find elements with class .box among descendants of #box
-$('#box').find('.box')
+$('#box').find('.box');
 ```
 
 ### `.children()` {#children}
@@ -1263,7 +1266,7 @@ It accepts a CSS selector, HTML string, DOM element, array of DOM elements, or J
 The method returns the original collection.
 
 ```js
-$('<p>Hello</p>').appendTo('<p>I would like to say: </p>')
+$('<p>Hello</p>').appendTo('<p>I would like to say: </p>');
 // Result: <p>I would like to say: <p>Hello</p></p>
 ```
 
@@ -1385,7 +1388,7 @@ This method creates a deep copy of all elements in the current collection.
 It uses the native `cloneNode` method and does not copy data and event handlers to the new elements. This behavior differs from jQuery, where a single parameter determines whether to copy data and event handlers.
 
 ```js
-$('body').append($("#box").clone())
+$('body').append($('#box').clone());
 ```
 
 ## Form {#api-form}
@@ -1414,7 +1417,7 @@ If there are duplicate keys, the corresponding values will be converted into an 
 It can operate on individual form elements or an entire <form>.
 
 ```js
-$('form').serializeObject()
+$('form').serializeObject();
 // { name: mdui, password: 123456 }
 ```
 
@@ -1441,7 +1444,9 @@ $('.box').on('click', function (e) {
 
 // Bind multiple events
 $('.box').on('click focus', function (e) {
-  console.log('This function will be triggered for both click and focus events');
+  console.log(
+    'This function will be triggered for both click and focus events',
+  );
 });
 
 // Event delegation
@@ -1451,59 +1456,78 @@ $(document).on('click', '.box', function (e) {
 
 // Binding multiple events and handlers
 $('.box').on({
-  'click': function (e) {
+  click: function (e) {
     console.log('Clicked on .box element');
   },
-  'focus': function (e) {
+  focus: function (e) {
     console.log('Focused on .box element');
-  }
+  },
 });
 
 // Passing parameters
 $('.box').on('click', { key1: 'value1', key2: 'value2' }, function (e) {
-  console.log('Clicked on .box element and passed parameters to the event handler');
+  console.log(
+    'Clicked on .box element and passed parameters to the event handler',
+  );
   // e._data is {key1: 'value1', key2: 'value2'}
 });
 
 // Binding multiple events and handlers with parameters
-$('.box').on({
-  'click': function (e) {
-    console.log('Clicked on .box element');
-    // e._data is {key1: 'value1', key2: 'value2'}
+$('.box').on(
+  {
+    click: function (e) {
+      console.log('Clicked on .box element');
+      // e._data is {key1: 'value1', key2: 'value2'}
+    },
+    focus: function (e) {
+      console.log('Focused on .box element');
+      // e._data is {key1: 'value1', key2: 'value2'}
+    },
   },
-  'focus': function (e) {
-    console.log('Focused on .box element');
-    // e._data is {key1: 'value1', key2: 'value2'}
-  }
-}, { key1: 'value1', key2: 'value2' });
+  { key1: 'value1', key2: 'value2' },
+);
 
 // Event delegation with parameters
-$(document).on('click', '.box', { key1: 'value1', keys: 'value2' }, function (e) {
-  console.log('Clicked on .box element and passed parameters to the event handler');
-  // e._data is {key1: 'value1', key2: 'value2'}
-});
+$(document).on(
+  'click',
+  '.box',
+  { key1: 'value1', keys: 'value2' },
+  function (e) {
+    console.log(
+      'Clicked on .box element and passed parameters to the event handler',
+    );
+    // e._data is {key1: 'value1', key2: 'value2'}
+  },
+);
 
 // Bind multiple events and handlers with event delegation
-$(document).on({
-  'click': function (e) {
-    console.log('Clicked on .box element');
+$(document).on(
+  {
+    click: function (e) {
+      console.log('Clicked on .box element');
+    },
+    focus: function (e) {
+      console.log('Focused on .box element');
+    },
   },
-  'focus': function (e) {
-    console.log('Focused on .box element');
-  }
-}, '.box');
+  '.box',
+);
 
 // Bind multiple events and handlers with event delegation and parameters
-$(document).on({
-  'click': function (e) {
-    console.log('Clicked on .box element');
-    // e._data is {key1: 'value1', key2: 'value2'}
+$(document).on(
+  {
+    click: function (e) {
+      console.log('Clicked on .box element');
+      // e._data is {key1: 'value1', key2: 'value2'}
+    },
+    focus: function (e) {
+      console.log('Focused on .box element');
+      // e._data is {key1: 'value1', key2: 'value2'}
+    },
   },
-  'focus': function (e) {
-    console.log('Focused on .box element');
-    // e._data is {key1: 'value1', key2: 'value2'}
-  }
-}, '.box', { key1: 'value1', key2: 'value2' });
+  '.box',
+  { key1: 'value1', key2: 'value2' },
+);
 
 // Get event parameters
 $('.box').on('click', function (e, data) {
@@ -1545,15 +1569,18 @@ $(document).off('click', '.box', callback);
 
 // Unbind multiple event handlers
 $('.box.').off({
-  'click': callback1,
-  'focus': callback2,
+  click: callback1,
+  focus: callback2,
 });
 
 // Unbind multiple event handlers with delegated
-$(document).off({
-  'click': callback1,
-  'focus': callback2,
-}, '.box');
+$(document).off(
+  {
+    click: callback1,
+    focus: callback2,
+  },
+  '.box',
+);
 
 // Event names support namespaces. The following unbinds all events ending with .myPlugin
 $(document).off('.myPlugin');
@@ -1593,7 +1620,7 @@ $.ajaxSetup({
   global: false,
 
   // Default to POST request
-  method: 'POST'
+  method: 'POST',
 });
 ```
 
@@ -1609,11 +1636,11 @@ const promise = $.ajax({
   url: './test.php',
   data: {
     key1: 'val1',
-    key2: 'val2'
+    key2: 'val2',
   },
   success: function (response) {
     console.log(response);
-  }
+  },
 });
 
 promise

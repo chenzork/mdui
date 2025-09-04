@@ -1,3 +1,5 @@
+# Dynamic Theme
+
 mdui supports dynamic theming. By providing a color value, mdui generates a comprehensive color scheme. It can also extract the dominant color from a wallpaper and create a color scheme based on it.
 
 Click the palette icon <mdui-icon name="palette--outlined" style="vertical-align: middle"></mdui-icon> in the top right corner of the documentation page to toggle between color schemes and observe the appearance of various components under different color schemes.
@@ -22,7 +24,7 @@ import { setColorScheme } from 'mdui/functions/setColorScheme.js';
 
 // Generate a color scheme based on #0061a4 and apply it to the .foo element
 setColorScheme('#0061a4', {
-  target: document.querySelector('.foo')
+  target: document.querySelector('.foo'),
 });
 ```
 
@@ -36,22 +38,22 @@ setColorScheme('#0061a4', {
   customColors: [
     {
       name: 'error',
-      value: '#69F0AE'
+      value: '#69F0AE',
     },
     {
       name: 'music',
-      value: '#FFC107'
-    }
-  ]
+      value: '#FFC107',
+    },
+  ],
 });
 ```
 
 A custom color group includes four CSS custom properties:
 
-* `--mdui-color-{name}`
-* `--mdui-color-on-{name}`
-* `--mdui-color-{name}-container`
-* `--mdui-color-on-{name}-container`
+- `--mdui-color-{name}`
+- `--mdui-color-on-{name}`
+- `--mdui-color-{name}-container`
+- `--mdui-color-on-{name}-container`
 
 Here, `{name}` is the custom color `name` you provided in the `customColors` field.
 
@@ -91,5 +93,5 @@ import { setColorScheme } from 'mdui/functions/setColorScheme.js';
 const image = new Image();
 image.src = 'image1.png';
 
-getColorFromImage(image).then(color => setColorScheme(color));
+getColorFromImage(image).then((color) => setColorScheme(color));
 ```

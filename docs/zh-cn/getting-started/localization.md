@@ -1,12 +1,14 @@
+# 本地化
+
 mdui 内部默认使用英文，如果需要使用其他语言，则需要进行多语言配置。
 
 ## 使用方法 {#usage}
 
 mdui 提供了三个函数来实现多语言功能：
 
-* [`loadLocale`](/zh-cn/docs/2/functions/loadLocale)：加载语言包。参数为一个函数，接收一个语言代码作为参数，返回 Promise，当语言包加载完成时，Promise 被 resolve 为对应的语言包。请确保在项目的入口文件中调用该函数。
-* [`setLocale`](/zh-cn/docs/2/functions/setLocale)：切换到指定的语言。参数为新的语言代码，返回 Promise，在新的语言包加载完成后 resolve。
-* [`getLocale`](/zh-cn/docs/2/functions/getLocale)：获取当前的语言代码。
+- [`loadLocale`](/zh-cn/docs/2/functions/loadLocale)：加载语言包。参数为一个函数，接收一个语言代码作为参数，返回 Promise，当语言包加载完成时，Promise 被 resolve 为对应的语言包。请确保在项目的入口文件中调用该函数。
+- [`setLocale`](/zh-cn/docs/2/functions/setLocale)：切换到指定的语言。参数为新的语言代码，返回 Promise，在新的语言包加载完成后 resolve。
+- [`getLocale`](/zh-cn/docs/2/functions/getLocale)：获取当前的语言代码。
 
 使用示例如下：
 
@@ -82,7 +84,9 @@ window.addEventListener('mdui-localize-status', (event) => {
   } else if (event.detail.status === 'ready') {
     console.log(`新语言包 ${event.detail.readyLocale} 加载成功`);
   } else if (event.detail.status === 'error') {
-    console.error(`新语言包 ${event.detail.errorLocale} 加载失败：${event.detail.errorMessage}`);
+    console.error(
+      `新语言包 ${event.detail.errorLocale} 加载失败：${event.detail.errorMessage}`,
+    );
   }
 });
 ```
@@ -108,7 +112,7 @@ import { loadLocale } from 'mdui/functions/loadLocale.js';
 
 const localizedTemplates = new Map([
   ['zh-cn', import(`../node_modules/mdui/locales/zh-cn.js`)],
-  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)]
+  ['zh-tw', import(`../node_modules/mdui/locales/zh-tw.js`)],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));
@@ -125,7 +129,7 @@ import * as locale_zh_tw from 'mdui/locales/zh-tw.js';
 
 const localizedTemplates = new Map([
   ['zh-cn', locale_zh_cn],
-  ['zh-tw', locale_zh_tw]
+  ['zh-tw', locale_zh_tw],
 ]);
 
 loadLocale(async (locale) => localizedTemplates.get(locale));
@@ -139,8 +143,10 @@ loadLocale(async (locale) => localizedTemplates.get(locale));
 <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
 
 <script>
-mdui.loadLocale((locale) => import(`https://unpkg.com/mdui@2/locales/${locale}.js`));
-mdui.setLocale('zh-cn');
+  mdui.loadLocale(
+    (locale) => import(`https://unpkg.com/mdui@2/locales/${locale}.js`),
+  );
+  mdui.setLocale('zh-cn');
 </script>
 ```
 

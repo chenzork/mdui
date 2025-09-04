@@ -1,3 +1,5 @@
+# 与其他框架集成
+
 mdui 使用浏览器原生支持的 Web Components 开发，因此能在所有 Web 框架中使用。下面列举了在常用框架中使用 mdui 的方法。
 
 ## Aurelia {#Aurelia}
@@ -13,10 +15,7 @@ npm install aurelia-mdui --save
 ```typescript
 import { MduiWebTask } from 'aurelia-mdui';
 
-Aurelia
-  .register(MduiWebTask)
-  .app(MyApp)
-  .start();
+Aurelia.register(MduiWebTask).app(MyApp).start();
 ```
 
 **注意**

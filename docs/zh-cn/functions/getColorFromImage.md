@@ -1,3 +1,5 @@
+# getColorFromImage 函数
+
 `getColorFromImage` 函数用于从指定图片中提取主色调。获取主色调后，你可以使用 [`setColorScheme`](/zh-cn/docs/2/functions/setColorScheme) 函数来设置配色方案，从而实现[动态配色](/zh-cn/docs/2/styles/dynamic-color)功能。
 
 ## 使用方法 {#usage}
@@ -12,9 +14,9 @@ import { getColorFromImage } from 'mdui/functions/getColorFromImage.js';
 
 ```js
 const image = new Image();
-image.src = "demo.png";
+image.src = 'demo.png';
 
-getColorFromImage(image).then(color => {
+getColorFromImage(image).then((color) => {
   console.log(color);
 });
 ```

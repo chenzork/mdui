@@ -58,7 +58,7 @@ components.forEach((component) => {
           ? component.members.filter(isMethod)
           : key === 'events'
             ? (component[key] ?? []).filter((event) => event.description)
-            : component[key] ?? [];
+            : (component[key] ?? []);
 
     items.forEach((_item) => {
       const item = _item as CustomElementField; // 其他类型和 CustomElementField 结构一致
@@ -393,7 +393,7 @@ fs.writeFileSync(
 const updateJson = (targetJson: I18nData, originJson: I18nData) => {
   // 递归，移除多余的属性
   for (const key in targetJson) {
-    if (originJson.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(originJson, key)) {
       if (Array.isArray(targetJson[key]) || Array.isArray(originJson[key])) {
         targetJson[key] = originJson[key];
       } else if (
@@ -409,7 +409,7 @@ const updateJson = (targetJson: I18nData, originJson: I18nData) => {
 
   // 添加新增的属性
   for (const key in originJson) {
-    if (!targetJson.hasOwnProperty(key)) {
+    if (!Object.prototype.hasOwnProperty.call(targetJson, key)) {
       targetJson[key] = originJson[key];
     }
   }

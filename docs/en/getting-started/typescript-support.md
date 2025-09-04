@@ -1,3 +1,5 @@
+# TypeScript Support
+
 mdui is developed with TypeScript, offering robust TypeScript support. All official mdui libraries include type declaration files for immediate use.
 
 ## Component Instance Types {#instance}
@@ -27,8 +29,7 @@ Your IDE will automatically suggest the properties and methods of the `tooltip` 
 When adding an event listener to the `tooltip` variable, the IDE will also suggest event names, event types, and the `this` context in the callback function:
 
 ```ts
-tooltip.addEventListener('open', function(event) {
-});
+tooltip.addEventListener('open', function (event) {});
 ```
 
 ## Event Types {#event}

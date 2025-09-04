@@ -1,3 +1,5 @@
+# TypeScript 支持
+
 mdui 是用 TypeScript 开发的，因此对 TypeScript 提供了良好的支持。所有的 mdui 官方库都自带类型声明文件，可以直接使用。
 
 ## 组件的实例类型 {#instance}
@@ -27,8 +29,7 @@ const tooltip = document.querySelector('mdui-tooltip') as Tooltip;
 如果在 `tooltip` 变量上添加事件监听，也会自动提示事件名称，事件类型，以及回调函数中 `this` 的指向：
 
 ```ts
-tooltip.addEventListener('open', function(event) {
-});
+tooltip.addEventListener('open', function (event) {});
 ```
 
 ## 事件类型 {#event}

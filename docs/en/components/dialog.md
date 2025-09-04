@@ -1,3 +1,5 @@
+# Dialog Component
+
 Dialogs are used to display crucial information during a user's workflow.
 
 In addition to directly using this component, mdui also provides four functions: [`mdui.dialog`](/en/docs/2/functions/dialog), [`mdui.alert`](/en/docs/2/functions/alert), [`mdui.confirm`](/en/docs/2/functions/confirm), [`mdui.prompt`](/en/docs/2/functions/prompt). These functions simplify the use of the Dialog component.

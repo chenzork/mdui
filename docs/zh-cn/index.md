@@ -1,3 +1,5 @@
+# 概述
+
 让我们通过 mdui 的 CDN 和一个最简单的页面模板来开始使用 mdui。
 
 > 你正在阅读的是 mdui 2 的文档！
@@ -15,7 +17,7 @@
 将下面代码添加到页面的 `<head>` 标签中：
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+<link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css" />
 <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
 ```
 

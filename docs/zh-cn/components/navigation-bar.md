@@ -1,3 +1,5 @@
+# 底部导航栏组件 NavigationBar
+
 导航栏用于在移动端页面中方便地在几个主要页面之间进行切换。
 
 ## 使用方法 {#usage}
@@ -58,9 +60,9 @@ import type { NavigationBarItem } from 'mdui/components/navigation-bar-item.js';
 
 你可以通过在 `<mdui-navigation-bar>` 组件上设置 `label-visibility` 属性来调整文本标签的显示状态。可选值有：
 
-* `selected`：仅显示选中状态的文本
-* `labeled`：始终显示文本
-* `unlabeled`：始终不显示文本
+- `selected`：仅显示选中状态的文本
+- `labeled`：始终显示文本
+- `unlabeled`：始终不显示文本
 
 ```html,example,expandable,playgroundId=310
 <mdui-navigation-bar value="item-1" label-visibility="selected" style="position: relative" class="example-label">

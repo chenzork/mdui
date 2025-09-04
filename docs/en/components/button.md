@@ -1,3 +1,5 @@
+# Button Component
+
 Buttons are interactive components that enable users to execute actions such as sending emails, sharing documents, or expressing preferences.
 
 ## Usage {#usage}

@@ -1,10 +1,14 @@
+# 常见问题
+
+以下整理了一些 mdui 社区常见的问题和官方答复，在提问之前建议找找有没有类似的问题。
+
 ## 使用自闭合标签为何无法显示组件？ {#no-self-closing}
 
 mdui 是基于 Web Components 开发的组件库，Web Components 规范不支持自闭合标签，因此请确保为 mdui 组件添加结束标签。
 
 ```html
 <!-- 错误用法 -->
-<mdui-text-field/>
+<mdui-text-field />
 
 <!-- 正确用法 -->
 <mdui-text-field></mdui-text-field>
@@ -42,7 +46,7 @@ mdui 是基于 Web Components 开发的组件库，Web Components 规范不支�
   await Promise.allSettled([
     customElements.whenDefined('mdui-button'),
     customElements.whenDefined('mdui-card'),
-    customElements.whenDefined('mdui-checkbox')
+    customElements.whenDefined('mdui-checkbox'),
   ]);
 
   // 现在 button, card, checkbox 组件已经注册完成，添加 ready class，使页面淡入显示

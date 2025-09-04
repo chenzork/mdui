@@ -1,3 +1,5 @@
+# 安装
+
 你可以选择通过 npm 安装 mdui，或者从 CDN 引入 mdui。推荐使用 npm 进行安装。
 
 ## npm 安装 {#npm}
@@ -134,7 +136,6 @@ import { throttle } from 'mdui/functions/throttle.js';</code></pre>
 ## CDN {#cdn}
 
 你可以使用 `<link>` 和 `<script>` 标签直接通过 CDN 来使用 mdui。也可以下载 CSS 和 JavaScript 文件并部署在你自己的服务器上。引入 CSS 和 JavaScript 文件后，就能使用所有 mdui 组件了。
-
 
 ### 使用全局构建版本 {#global-build}
 

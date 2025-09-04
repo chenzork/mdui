@@ -1,3 +1,5 @@
+# Navigation Bar Component
+
 The navigation bar facilitates easy switching between main pages on mobile devices.
 
 ## Usage {#usage}
@@ -58,9 +60,9 @@ Text labels in the navigation bar are always visible when there are 3 or fewer n
 
 The `label-visibility` attribute on `<mdui-navigation-bar>` controls the visibility of text labels. Possible values:
 
-* `selected`: Only the text of the selected item is displayed.
-* `labeled`: Text is always displayed.
-* `unlabeled`: Text is never displayed.
+- `selected`: Only the text of the selected item is displayed.
+- `labeled`: Text is always displayed.
+- `unlabeled`: Text is never displayed.
 
 ```html,example,expandable,playgroundId=310
 <mdui-navigation-bar value="item-1" label-visibility="selected" style="position: relative" class="example-label">
